@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
+
     <head>
-        <title>Javascript TIC TAC TOE</title>
+        <title>Javascript TIC TAC SNAP</title>
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+
+  
+      
         <style>
             
             *{box-sizing: border-box}
@@ -13,44 +17,47 @@
                        overflow: hidden;
                        margin: 50px auto 0 auto;
                      }
-            
+
             .container span{width: 100%;
                             display: block;
                             text-align: center;
                             font-family: sans-serif;
                             color: #fff;
                             font-size: 25px;
-                            background: #446CB3;
+                            background: #9B55A0;
                            }
             
-            .container .box{float: left;
+            .container .box{
+                            background: #03A588;
+                            color: #fff;
+                            float: left;
                             width: 100px;
                             height: 100px;
                             border: 1px solid #000;
                             transition: all .25s ease-in-out;
                             font-family: sans-serif; 
-                            font-size: 85px;
+                            font-size: 50px;
                             text-align: center;
                             line-height: 100px; 
                             cursor: pointer;
                           }
-            
-            .container .box:hover{background: rgba(10,10,10,0.5);
+            /*Hover Color */
+            .container .box:hover{background: #3CB2E2;
                                   color: #fff
                                  }
-            
-            button{background: #26C281;
-                   color: #fff;
+            /*PLAY AGAIN BUTTON*/
+            button{background: #FFFC00; 
+                   color: #000000;
                    font-weight: bold;
-                   border: 1px solid yellow;
+                   border: 1px solid black;
                     cursor: pointer; 
-                    width: 200px;
-                    height: 40px; 
+                    width: 600px;
+                    height: 120px; 
                     font-size: 22px;
                     display: block;
                     margin: 10px auto}
             
-            .win{background: #F9690E; color: #fff}
+            .win{background: #9B55A0; color: #fff}
             
         </style>
         
@@ -58,7 +65,7 @@
     <body>
        
         <div class="container" id="main">
-            <span id="turn">Play</span>
+            <span id="turn">TIC-TAC-SNAP</span>
             <!-- show X or O on div click -->
             <div class="box" id="box1"></div>
             <div class="box" id="box2"></div>
@@ -84,7 +91,7 @@
                 b1.classList.add("win");
                 b2.classList.add("win");
                 b3.classList.add("win");
-                turn.innerHTML = b1.innerHTML + " Won Congrat";
+                turn.innerHTML = b1.innerHTML + " Won. Congrats!";
                 turn.style.fontSize = "40px";
             }
             
@@ -135,14 +142,15 @@
                     if(this.innerHTML !== "X" && this.innerHTML !== "O"){
                     if(X_or_O%2 === 0){
                        console.log(X_or_O);
-                       this.innerHTML = "X"; 
+                       this.innerHTML = "yee";
+                       show_image('https://i.guim.co.uk/img/media/d325182bd10baf8634784b7c6d0349930b8a8677/0_0_1592_1592/master/1592.png?width=620&quality=45&auto=format&fit=max&dpr=2&s=d456810d98b848f81fd580416f58c695', boxes.length/2, boxes.height/2, 'img'); 
                        turn.innerHTML = "O Turn Now";
                        getWinner();
                        X_or_O += 1;
                        
                     }else{
                         console.log(X_or_O);
-                       this.innerHTML = "O";
+                       this.innerHTML = "Haw";
                        turn.innerHTML = "X Turn Now";
                        getWinner();
                        X_or_O += 1;  
@@ -163,6 +171,17 @@
                 }
                 
             }
+          function show_image(src, width, height, alt) {
+          var img = document.createElement("img");
+          img.src = src;
+          img.width = width;
+          img.height = height;
+          
+          img.alt = alt;
+
+          // This next line will just add it to the <body> tag
+          document.body.appendChild(img);
+      }
             
         </script>
         
