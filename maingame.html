@@ -1,16 +1,14 @@
+
 <!DOCTYPE html>
 <html>
 
     <head>
-        <title>Javascript TIC TAC SNAP</title>
+        <title>TIC-TAC-SNAP</title>
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-
-  
       
         <style>
-            
+ 
             *{box-sizing: border-box}
             
             .container{width: 300px;
@@ -58,7 +56,8 @@
                     margin: 10px auto}
             
             .win{background: #9B55A0; color: #fff}
-            
+            IMG STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:50px; HEIGHT:50px" SRC="circle.gif"
+ 
         </style>
         
     </head>
@@ -139,18 +138,20 @@
             for(var i = 0; i < boxes.length; i++){
                 boxes[i].onclick = function(){
                     // not allow to change the value of the box
-                    if(this.innerHTML !== "yee" && this.innerHTML !== "Haw"){
+                    if(this.innerHTML !== "💣" && this.innerHTML !== "⚔️"){
                     if(X_or_O%2 === 0){
                        console.log(X_or_O);
-                       this.innerHTML = "yee";
-                       show_image('user.bitmoji.avatar', 50, 50, 'img'); 
+                       this.innerHTML = "💣";
+                       show_image('https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji1.png?1555180087459', 300, 300, boxes.length, 'png'); 
+
                        turn.innerHTML = "O Turn Now";
                        getWinner();
                        X_or_O += 1;
                        
                     }else{
                         console.log(X_or_O);
-                       this.innerHTML = "Haw";
+                       this.innerHTML = "⚔️";
+                      show_image('https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji2.png?1555180180694', 300, 300, boxes.length, 'png');
                        turn.innerHTML = "X Turn Now";
                        getWinner();
                        X_or_O += 1;  
@@ -159,24 +160,27 @@
                     
                 };
             }
+          
+          
             
             function replay(){
                 
                 for(var i = 0; i < boxes.length; i++){
                     boxes[i].classList.remove("win");
                     boxes[i].innerHTML = "";
+                  
                     turn.innerHTML = "Play";
                     turn.style.fontSize = "25px";
                     
                 }
                 
             }
-          function show_image(src, width, height, alt) {
+          function show_image(src, width, height, position, alt) {
           var img = document.createElement("img");
           img.src = src;
           img.width = width;
           img.height = height;
-          
+          img.position = position
           img.alt = alt;
 
           // This next line will just add it to the <body> tag

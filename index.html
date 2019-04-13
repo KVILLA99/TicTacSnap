@@ -45,7 +45,7 @@
         // Mount Login Button
         snap.loginkit.mountButton(loginButtonIconId, {
           clientId: '298a28f7-09d9-423a-8375-2da8d2b4ec03',
-          redirectURI: 'https://tictacsnap.com',
+          redirectURI: 'https://www.tictacsnap.com/',
           scopeList: [
             'user.display_name',
             'user.bitmoji.avatar',
@@ -55,10 +55,11 @@
           handleResponseCallback: function() {
             snap.loginkit.fetchUserInfo()
               .then(data => console.log('User info:', data));
-                  location.href = "maingame.html"
-        
+                  
+        location.href = "maingame.html"
           
           },
+          
         });
       };
 
