@@ -7,7 +7,7 @@
   
   
   <head>
-      
+       
    <img src="https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FTicTacSnap.png?1555147443362" width="100" height = "100" class="center">
   <title>TIC-TAC-SNAP</title>
     
@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">FIAT SLUG</a></li>
+                    <li><a href="#services">FIAT SLUG MEMBERS</a></li>
                 </ul>
             </div>
         </div>
@@ -32,34 +32,31 @@
               
                 
               <h1>Tic Tac Snap</h1>
-               
+              
+              
+                        
               
               
               
-         <html lang="en">
+       <html lang="en">
   <body>
-    <div  id="my-login-button-target" />
+    <div id="my-login-button-target" />
     <script>
        window.snapKitInit = function () {
         var loginButtonIconId = 'my-login-button-target';
         // Mount Login Button
         snap.loginkit.mountButton(loginButtonIconId, {
           clientId: '298a28f7-09d9-423a-8375-2da8d2b4ec03',
-          redirectURI: 'https://www.tictacsnap.com/',
+          redirectURI: 'https://tictacsnap.glitch.me/',
           scopeList: [
             'user.display_name',
             'user.bitmoji.avatar',
-            
           ],
-           
           handleResponseCallback: function() {
             snap.loginkit.fetchUserInfo()
               .then(data => console.log('User info:', data));
-                  
-        location.href = "maingame.html"
-          
+            location.href = "maingame.html";
           },
-          
         });
       };
 
@@ -71,11 +68,9 @@
         js.src = "https://sdk.snapkit.com/js/v1/login.js";
         sjs.parentNode.insertBefore(js, sjs);
       }(document, 'script', 'loginkit-sdk'));
-    </script>  
+    </script>
   </body>
-             
 </html>
-
              
                 
         
@@ -114,7 +109,7 @@
                         <div class="icon">
                             <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
                         </div>
-                        <h4><a href="#">Josue Uriate</a></h4>
+                        <h4><a href="#">Josue Uriarte</a></h4>
                         <p>Web Developer</p>
                     </div>
                 </div>
@@ -135,7 +130,7 @@
                         <div class="icon">
                             <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
                         </div>
-                        <h4><a href="#">Modesto</a></h4>
+                        <h4><a href="#">Modesto Amador</a></h4>
                         <p>Game Developer</p>
                     </div>
                 </div>
