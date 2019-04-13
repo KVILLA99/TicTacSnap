@@ -15,7 +15,8 @@
                        overflow: hidden;
                        margin: 50px auto 0 auto;
                      }
-
+          
+          /*Top Box*/
             .container span{width: 100%;
                             display: block;
                             text-align: center;
@@ -27,7 +28,7 @@
             
             .container .box{
                             background: #03A588;
-                            color: #fff;
+                            color: #0066ff;
                             float: left;
                             width: 100px;
                             height: 100px;
@@ -40,8 +41,9 @@
                             cursor: pointer;
                           }
             /*Hover Color */
-            .container .box:hover{background: #3CB2E2;
+            .container .box:hover{background: rgba(10,10,10,0.5);
                                   color: #fff
+                                    
                                  }
             /*PLAY AGAIN BUTTON*/
             button{background: #FFFC00; 
@@ -55,7 +57,7 @@
                     display: block;
                     margin: 10px auto}
             
-            .win{background: #9B55A0; color: #fff}
+            .win{background: #000080; color: #fff}
             IMG STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:50px; HEIGHT:50px" SRC="circle.gif"
  
         </style>
@@ -141,17 +143,14 @@
                     if(this.innerHTML !== "💣" && this.innerHTML !== "⚔️"){
                     if(X_or_O%2 === 0){
                        console.log(X_or_O);
-                       this.innerHTML = "💣";
-                       show_image('https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji1.png?1555180087459', 300, 300, boxes.length, 'png'); 
-
+                       this.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji1.png?1555180087459/350x350\" width=\"100px\" height=\"100px\">";;
                        turn.innerHTML = "O Turn Now";
                        getWinner();
                        X_or_O += 1;
                        
                     }else{
                         console.log(X_or_O);
-                       this.innerHTML = "⚔️";
-                      show_image('https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji2.png?1555180180694', 300, 300, boxes.length, 'png');
+                       this.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji2.png?1555180180694/350x350\" width=\"100px\" height=\"100px\">";;
                        turn.innerHTML = "X Turn Now";
                        getWinner();
                        X_or_O += 1;  
@@ -168,8 +167,9 @@
                 for(var i = 0; i < boxes.length; i++){
                     boxes[i].classList.remove("win");
                     boxes[i].innerHTML = "";
+                    
                   
-                    turn.innerHTML = "Play";
+                    turn.innerHTML = "TIC-TAC-SNAP";
                     turn.style.fontSize = "25px";
                     
                 }
