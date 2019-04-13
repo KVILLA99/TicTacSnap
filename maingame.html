@@ -16,23 +16,26 @@
                        margin: 50px auto 0 auto;
                      }
           
+          .win{background: #3CB2E2; color: #fff}
+          
           /*Top Box*/
+        
             .container span{width: 100%;
                             display: block;
                             text-align: center;
                             font-family: sans-serif;
                             color: #fff;
+                            border: 2px solid #000;
                             font-size: 25px;
                             background: #9B55A0;
                            }
             
             .container .box{
-                            background: #03A588;
-                            color: #0066ff;
+                            background: #FFFC00;
                             float: left;
                             width: 100px;
                             height: 100px;
-                            border: 1px solid #000;
+                            border: 2px solid #000;
                             transition: all .25s ease-in-out;
                             font-family: sans-serif; 
                             font-size: 50px;
@@ -46,10 +49,10 @@
                                     
                                  }
             /*PLAY AGAIN BUTTON*/
-            button{background: #FFFC00; 
+            button{background: #03A588; 
                    color: #000000;
                    font-weight: bold;
-                   border: 1px solid black;
+                   border: 2px solid black;
                     cursor: pointer; 
                     width: 600px;
                     height: 120px; 
@@ -57,7 +60,7 @@
                     display: block;
                     margin: 10px auto}
             
-            .win{background: #3CB2E2; color: #3CB2E2}
+            
  
         </style>
         
@@ -94,7 +97,7 @@
                 b2.classList.add("win");
                 b3.classList.add("win");
                 turn.innerHTML = b1.innerHTML + " Won. Congrats!";
-                turn.style.fontSize = "40px";
+                turn.style.fontSize = "30px";
             }
             
             function getWinner(){
@@ -112,28 +115,28 @@
             // get all posibilites
               if(box1.innerHTML !== "" && box1.innerHTML === box2.innerHTML && box1.innerHTML === box3.innerHTML)
                  selectWinnerBoxes(box1,box2,box3);
-         
+                 return;
               if(box4.innerHTML !== "" && box4.innerHTML === box5.innerHTML && box4.innerHTML === box6.innerHTML)
                  selectWinnerBoxes(box4,box5,box6);
-             
+               return;
               if(box7.innerHTML !== "" && box7.innerHTML === box8.innerHTML && box7.innerHTML === box9.innerHTML)
                  selectWinnerBoxes(box7,box8,box9);
-             
+             return;
               if(box1.innerHTML !== "" && box1.innerHTML === box4.innerHTML && box1.innerHTML === box7.innerHTML)
                  selectWinnerBoxes(box1,box4,box7);
-             
+             return;
               if(box2.innerHTML !== "" && box2.innerHTML === box5.innerHTML && box2.innerHTML === box8.innerHTML)
                  selectWinnerBoxes(box2,box5,box8);
-             
+             return;
               if(box3.innerHTML !== "" && box3.innerHTML === box6.innerHTML && box3.innerHTML === box9.innerHTML)
                  selectWinnerBoxes(box3,box6,box9);
-             
+             return;
               if(box1.innerHTML !== "" && box1.innerHTML === box5.innerHTML && box1.innerHTML === box9.innerHTML)
                  selectWinnerBoxes(box1,box5,box9);
-             
+             return;
               if(box3.innerHTML !== "" && box3.innerHTML === box5.innerHTML && box3.innerHTML === box7.innerHTML)
                  selectWinnerBoxes(box3,box5,box7);
-             
+             return;
             }
             
             
@@ -141,18 +144,18 @@
             for(var i = 0; i < boxes.length; i++){
                 boxes[i].onclick = function(){
                     // not allow to change the value of the box
-                    if(this.innerHTML !== "💣" && this.innerHTML !== "⚔️"){
+                    if(this.innerHTML !== "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji1.png?1555180087459/350x350\" width=\"100px\" height=\"100px\">" && this.innerHTML !== "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji2.png?1555180180694/350x350\" width=\"100px\" height=\"100px\">"){
                     if(X_or_O%2 === 0){
                        console.log(X_or_O);
                        this.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji1.png?1555180087459/350x350\" width=\"100px\" height=\"100px\">";;
-                       turn.innerHTML = "O Turn Now";
+                       turn.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji1.png?1555180087459/350x350\" width=\"50px\" height=\"50px\">" +" Turn Now";
                        getWinner();
                        X_or_O += 1;
                        
                     }else{
                         console.log(X_or_O);
                        this.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji2.png?1555180180694/350x350\" width=\"100px\" height=\"100px\">";;
-                       turn.innerHTML = ""+" Turn Now";
+                       turn.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji2.png?1555180180694/350x350\" width=\"50px\" height=\"50px\">"+" Turn Now";
                        getWinner();
                        X_or_O += 1;  
                     }
