@@ -283,7 +283,7 @@ section{
     width: 80px;
     height: 3px;
     margin: 20px auto 0;
-    background:#F05F40;
+    background:#000000;
 }
 
 .service-items .icon{
@@ -303,7 +303,7 @@ section{
     font-size: 22px;
     margin-bottom: 20px;
     text-transform: capitalize;
-    color: #F05F40;
+    color: #fff;
     
 }
 
@@ -321,133 +321,4 @@ section{
     color: #414141;
     margin-bottom: 15px;
 }
-
 /**** SERVICE END ****/
-/**** PORTFOLIO ****/
-
-.portfolio-section{
-    padding: 0;
-}
-
-.portfolio-section .portfolio-section-inner{
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    max-width: 2000px;
-}
-
-.portfolio-section-inner .portfolio-section-row{
-    display: table-row;
-    width: 100%;
-}
-
-.portfolio-section-inner .portfolio-section-data{
-    display: table-cell;
-    width: 33.33%;
-    vertical-align: middle;
-    height: 420px;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-section-inner .portfolio-section-data .portfolio-section-text{
-    position: absolute;
-    top: 150%;;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(0,0,0,0.8);
-    margin: auto;
-     -ms-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-.portfolio-section-inner .portfolio-section-data:hover .portfolio-section-text{
-    top: 0;
-}
-
-.portfolio-section-text .portfolio-section-text-inner{
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    left: 20px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.portfolio-section-text p{
-    font-size: 28px;
-    line-height: 1.6;
-    color: #fff;
-}
-
-.portfolio-section-text a{
-    color: #F05F40;
-    font-size: 14px;
-}
-
-.portfolio-section-text a:hover{
-    color: #fff;
-}
-/**** PORTFOLIO ****/
-/**** FOOTER ****/
-
-footer{
-    background: #222;
-    padding: 80px 0;
-    position: relative;
-    text-align: center;
-}
-
-footer h3{
-    font-size: 36px;
-    margin-bottom: 30px;
-    text-transform: capitalize;
-    color: #fff;
-    letter-spacing: 0.05em;
-}
-
-footer h3:after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 3px;
-    margin: 20px auto 0;
-    background:#F05F40;
-}
-
-footer p{
-    font-size: 18px;
-    line-height: 1.6;
-    color: #adadad;
-}
-
-.gap{
-    display: block;
-    margin-top: 50px;
-}
-
-footer span.glyphicon{
-    color: #adadad;
-    font-size: 28px;
-    display: block;
-    margin: 0 auto 30px;
-}
-
-footer a{
-    color: #adadad;
-    
-}
-
-footer a:hover{
-    color: #F05F40;
-}
-
-
-
-
-
