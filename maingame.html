@@ -41,8 +41,8 @@
                             cursor: pointer;
                           }
             /*Hover Color */
-            .container .box:hover{background: rgba(10,10,10,0.5);
-                                  color: #fff
+            .container .box:hover{background: #3CB2E2;
+                                  color: #fff;
                                     
                                  }
             /*PLAY AGAIN BUTTON*/
@@ -57,14 +57,15 @@
                     display: block;
                     margin: 10px auto}
             
-            .win{background: #000080; color: #fff}
-            IMG STYLE="position:absolute; TOP:35px; LEFT:170px; WIDTH:50px; HEIGHT:50px" SRC="circle.gif"
+            .win{background: #3CB2E2; color: #3CB2E2}
  
         </style>
         
+      
+      
+      
     </head>
     <body>
-       
         <div class="container" id="main">
             <span id="turn">TIC-TAC-SNAP</span>
             <!-- show X or O on div click -->
@@ -151,7 +152,7 @@
                     }else{
                         console.log(X_or_O);
                        this.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji2.png?1555180180694/350x350\" width=\"100px\" height=\"100px\">";;
-                       turn.innerHTML = "X Turn Now";
+                       turn.innerHTML = ""+" Turn Now";
                        getWinner();
                        X_or_O += 1;  
                     }
