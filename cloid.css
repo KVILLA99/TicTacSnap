@@ -17,6 +17,9 @@ body {
     -webkit-font-smoothing: antialiased !important;
 }
 
+
+
+
 a {
     text-decoration: none;
     -ms-transition: all 0.3s ease-in;
@@ -36,7 +39,8 @@ a:active {
 }
 
 img {
-    max-width: 100%, height: auto;
+    max-width: 110%;
+    height: auto;
 }
 
 strong,
@@ -202,7 +206,7 @@ h1, h2, h3, h4 {
 }
 
 section{
-    padding: 80px 0;
+    padding: 180px 0;
     position: relative;
     text-align: center;
 }
@@ -228,7 +232,7 @@ section{
     font-size: 18px;
     line-height: 1.8;
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .btn-default-new{

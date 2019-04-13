@@ -32,7 +32,42 @@
                 <a href="maingame.html" class="btn btn-lg btn-default">Play now!</a>
               
               
-            
+              
+         <html lang="en">
+  <body>
+    <div id="my-login-button-target" />
+    <script>
+       window.snapKitInit = function () {
+        var loginButtonIconId = 'my-login-button-target';
+        // Mount Login Button
+        snap.loginkit.mountButton(loginButtonIconId, {
+          clientId: '298a28f7-09d9-423a-8375-2da8d2b4ec03',
+          redirectURI: 'https://tictacsnap.com',
+          scopeList: [
+            'user.display_name',
+            'user.bitmoji.avatar',
+          ],
+          handleResponseCallback: function() {
+            snap.loginkit.fetchUserInfo()
+              .then(data => console.log('User info:', data));
+          },
+        });
+      };
+
+      // Load the SDK asynchronously
+      (function (d, s, id) {
+        var js, sjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://sdk.snapkit.com/js/v1/login.js";
+        sjs.parentNode.insertBefore(js, sjs);
+      }(document, 'script', 'loginkit-sdk'));
+    </script>
+  </body>
+</html>
+
+                
+                
         <p>We're in the endgame now.</p>
             </div>
         </div>
@@ -77,7 +112,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="service-items">
                         <div class="icon">
-                          <img src="http://www.bitjourni.net/images/bitjason.png" alt="..." class="rounded float-left">
+                          <img src="http://www.bitjourni.net/images/bitjason.png" alt="..." class="rounded float-l">
                         </div>
                         <h4><a href="#">Kevin Villanueva</a></h4>
                         <p> web development operator</p>
@@ -99,7 +134,7 @@
         </div>
       </section>
       
-
+</head>
   
       
       
