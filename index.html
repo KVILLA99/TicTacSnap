@@ -7,17 +7,19 @@
   
   
   <head>
-    <title>TIC-TAC-SNAP</title>
+      
+   <img src="https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FTicTacSnap.png?1555147443362" width="100" height = "100" class="center">
+  <title>TIC-TAC-SNAP</title>
     
     <body data-spy="scroll" data-target="#myScrollspy">
     <nav class="navbar navbar-default navbar-fixed-top" data-spy="affix" data-offset-top="205">
         <div class="container-fluid">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">Fiat Slug</a> </div>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#">www.TicTacSnap.com</a> </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Rowing Team</a></li>
+                    <li><a href="#services">FIAT SLUG</a></li>
                 </ul>
             </div>
         </div>
@@ -28,28 +30,33 @@
               <div class="container">
             <div class="header-content-inner">
               
-                <h1>Tic Tac Snap</h1>
-                <a href="maingame.html" class="btn btn-lg btn-default">Play now!</a>
+                
+              <h1>Tic Tac Snap</h1>
+               
               
               
               
          <html lang="en">
   <body>
-    <div id="my-login-button-target" />
+    <div  id="my-login-button-target" />
     <script>
        window.snapKitInit = function () {
         var loginButtonIconId = 'my-login-button-target';
         // Mount Login Button
         snap.loginkit.mountButton(loginButtonIconId, {
           clientId: '298a28f7-09d9-423a-8375-2da8d2b4ec03',
-          redirectURI: 'https://tictacsnap.com/',
+          redirectURI: 'https://tictacsnap.com',
           scopeList: [
             'user.display_name',
             'user.bitmoji.avatar',
+            
           ],
+           
           handleResponseCallback: function() {
             snap.loginkit.fetchUserInfo()
               .then(data => console.log('User info:', data));
+                  location.href = "maingame.html"
+        
           
           },
         });
@@ -63,13 +70,14 @@
         js.src = "https://sdk.snapkit.com/js/v1/login.js";
         sjs.parentNode.insertBefore(js, sjs);
       }(document, 'script', 'loginkit-sdk'));
-    </script>
+    </script>  
   </body>
+             
 </html>
 
+             
                 
-                
-        <p>We're in the endgame now.</p>
+        
             </div>
         </div>
       </div>
@@ -79,8 +87,8 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
                     <h3>About</h3>
-                    <p>Just a bunch of UCSC kids trying to be cool.</p>
-                    <p>Made for the 2019 USC Hackathon</p> <a href="https://devpost.com/software/placeholder-2b14zl" class="btn btn-default-new">TicTacSnap Devpost</a> </div>
+                    <p>A simple Tic Tac Toe game but with a twist, the X's and O's are the players bitmoji supplied through Snapchat login API.</p>
+                    <p>Made in 2019 for HACKSC.</p> <a href="https://devpost.com/software/placeholder-2b14zl" class="btn btn-default-new">TicTacSnap Devpost</a> </div>
             </div>
         </div>
     </section>
@@ -96,7 +104,7 @@
                             <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
                         </div>
                         <h4><a href="#">Miguelcloid Reniva</a></h4>
-                        <p>God of CSS</p>
+                        <p>Web Devloper</p>
                     </div>
                 </div>
                 
@@ -106,17 +114,18 @@
                             <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
                         </div>
                         <h4><a href="#">Josue Uriate</a></h4>
-                        <p>placeholder</p>
+                        <p>Web Developer</p>
                     </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="service-items">
                         <div class="icon">
-                          <img src="http://www.bitjourni.net/images/bitjason.png" alt="..." class="rounded float-l">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
                         </div>
+                    
                         <h4><a href="#">Kevin Villanueva</a></h4>
-                        <p> web development operator</p>
+                        <p>SnapChat Integration</p>
                     </div>
                 </div>
                 
@@ -125,8 +134,8 @@
                         <div class="icon">
                             <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
                         </div>
-                        <h4><a href="#">Mofesto</a></h4>
-                        <p>Photoshopping</p>
+                        <h4><a href="#">Modesto</a></h4>
+                        <p>Game Developer</p>
                     </div>
                 </div>
                 
