@@ -139,11 +139,11 @@
             for(var i = 0; i < boxes.length; i++){
                 boxes[i].onclick = function(){
                     // not allow to change the value of the box
-                    if(this.innerHTML !== "X" && this.innerHTML !== "O"){
+                    if(this.innerHTML !== "yee" && this.innerHTML !== "Haw"){
                     if(X_or_O%2 === 0){
                        console.log(X_or_O);
                        this.innerHTML = "yee";
-                       show_image('https://i.guim.co.uk/img/media/d325182bd10baf8634784b7c6d0349930b8a8677/0_0_1592_1592/master/1592.png?width=620&quality=45&auto=format&fit=max&dpr=2&s=d456810d98b848f81fd580416f58c695', boxes.length/2, boxes.height/2, 'img'); 
+                       show_image('user.bitmoji.avatar', 50, 50, 'img'); 
                        turn.innerHTML = "O Turn Now";
                        getWinner();
                        X_or_O += 1;
