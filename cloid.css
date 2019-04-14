@@ -15,6 +15,15 @@ font-family: 'Roboto Slab', serif; */
   margin-right: auto;
   width: 12%;
 }
+  
+  .center2 {
+  
+  margin-top: 35px;
+  margin-bottom: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
 body {
     background: #fff;
     color: #00000;
@@ -214,14 +223,14 @@ h1, h2, h3, h4 {
 }
 
 section{
-    padding: 130px 0;
+    padding: 60px 0;
     position: relative;
     text-align: center;
 }
 
 .about-section h3{
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 0.05em;
@@ -285,19 +294,6 @@ section{
     height: 3px;
     margin: 20px auto 0;
     background:#000000;
-}
-
-.service-items .icon{
-    color: #F05F40;
-    font-size: 36px;
-    display: block;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    border-radius: 100%;
-    border: solid 2px #F05F40;
-    margin: 0 auto 30px;
-    line-height: 98px;
 }
 
 .service-items h4{
