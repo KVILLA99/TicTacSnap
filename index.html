@@ -30,43 +30,39 @@
              <h1>Tic Tac Snap</h1>
               
               
-    <html lang="en">
-          <body>
-            <div id="my-login-button-target" />
-              <script>
-               window.snapKitInit = function () {
-                var loginButtonIconId = 'my-login-button-target';
-                // Mount Login Button
-                snap.loginkit.mountButton(loginButtonIconId, {
-                    clientId: '298a28f7-09d9-423a-8375-2da8d2b4ec03',
-                    redirectURI: 'https://www.tictacsnap.com/',
-                  scopeList: [
-                    'user.display_name',
-                    'user.bitmoji.avatar',
-                  ],
-                  handleResponseCallback: function() {
-                    snap.loginkit.fetchUserInfo()
-                      .then(data => console.log('User info:', data));
-                       location.href = "maingame.html";   
-                    },          
-                 
+  <html lang="en">
+  <body>
+    <div id="my-login-button-target" />
+    <script>
+       window.snapKitInit = function () {
+        var loginButtonIconId = 'my-login-button-target';
+        // Mount Login Button
+        snap.loginkit.mountButton(loginButtonIconId, {
+          clientId: '298a28f7-09d9-423a-8375-2da8d2b4ec03',
+          redirectURI: 'https://www.tictacsnap.com',
+          scopeList: [
+            'user.display_name',
+            'user.bitmoji.avatar',
+          ],
+          handleResponseCallback: function() {
+            snap.loginkit.fetchUserInfo()
+              .then(data => console.log('User info:', data));
+               location.href = "maingame.html";
+          },
         });
       };
-                           // Load the SDK asynchronously
-                        (function (d, s, id) {
-                          var js, sjs = d.getElementsByTagName(s)[0];
-                          if (d.getElementById(id)) return;
-                          js = d.createElement(s); js.id = id;
-                          js.src = "https://sdk.snapkit.com/js/v1/login.js";
-                          sjs.parentNode.insertBefore(js, sjs);
-                        }(document, 'script', 'loginkit-sdk'));
-                
-                          document.getElementById("login-button").classList.add("hidden")
-                        document.getElementById("profile").classList.remove("hidden")
-                        document.getElementById("picture").src = data["data"] ["me"] ["bitmoji"] ["avatar"]
-                        document.getElementById("welcome").innerHTML = "Welcome, " + data["data"] ["me"] ["displayName"] + "!" 
-            
-                
+
+      // Load the SDK asynchronously
+      (function (d, s, id) {
+        var js, sjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://sdk.snapkit.com/js/v1/login.js";
+        sjs.parentNode.insertBefore(js, sjs);
+      }(document, 'script', 'loginkit-sdk'));
+    </script>
+  </body>
+</html>
                 
                       </script>
                     </body>
