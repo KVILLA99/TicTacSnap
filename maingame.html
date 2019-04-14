@@ -174,20 +174,22 @@
             for(var i = 0; i < boxes.length; i++){
                 boxes[i].onclick = function(){
                     // not allow to change the value of the box
-                    if(this.innerHTML !== "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji1.png?1555180087459/350x350\" width=\"100px\" height=\"100px\">" && this.innerHTML !== "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji2.png?1555180180694/350x350\" width=\"100px\" height=\"100px\">"){
+                  
+                    if(this.innerHTML !== "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiFinal1.png?1555259681671/350x350\" width=\"100px\" height=\"100px\">" 
+                       && this.innerHTML !== "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiFinal2.png?1555259675778/350x350\" width=\"100px\" height=\"100px\">"){
                         if(X_or_O%2 === 0){
                             p1_or_p2 = 1;
                            console.log(X_or_O);
-                           this.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji1.png?1555180087459/350x350\" width=\"100px\" height=\"100px\">";;
-                           turn.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji2.png?1555180180694/350x350\" width=\"50px\" height=\"50px\">" +" Turn Now"; 
+                           this.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiFinal1.png?1555259681671/350x350\" width=\"100px\" height=\"100px\">";;
+                           turn.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiFinal2.png?1555259675778/350x350\" width=\"50px\" height=\"50px\">" +" Turn Now"; 
                            getWinner();
                            X_or_O += 1;   
                         }
                           else{
                             p1_or_p2 = 2;
                            console.log(X_or_O);
-                           this.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji2.png?1555180180694/350x350\" width=\"100px\" height=\"100px\">";;
-                           turn.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fbitmoji1.png?1555180087459/350x350\" width=\"50px\" height=\"50px\">"+" Turn Now";
+                           this.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiFinal2.png?1555259675778/350x350\" width=\"100px\" height=\"100px\">";;
+                           turn.innerHTML = "<img src=\"https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiFinal1.png?1555259681671/350x350\" width=\"50px\" height=\"50px\">"+" Turn Now";
                            getWinner();
                             
                            X_or_O += 1;  
@@ -197,8 +199,6 @@
                     
                 }
             }
-          
-          
             
             function replay(){
                 
