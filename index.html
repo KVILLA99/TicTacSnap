@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
-  
-  
   
   <head>
        
@@ -18,7 +14,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">FIAT SLUG MEMBERS</a></li>
+                    <li><a href="#services">FIAT SLUG </a></li>
                 </ul>
             </div>
         </div>
@@ -33,32 +29,30 @@
                 
              <h1>Tic Tac Snap</h1>
               
-             <html lang="en">
-  <body>
-    
-              <div id="my-login-button-target" />
+              
+    <html lang="en">
+          <body>
+            <div id="my-login-button-target" />
               <script>
-                 window.snapKitInit = function () {
-                  var loginButtonIconId = 'my-login-button-target';
-                  // Mount Login Button
-                  snap.loginkit.mountButton(loginButtonIconId, {
+               window.snapKitInit = function () {
+                var loginButtonIconId = 'my-login-button-target';
+                // Mount Login Button
+                snap.loginkit.mountButton(loginButtonIconId, {
                     clientId: '298a28f7-09d9-423a-8375-2da8d2b4ec03',
-                    redirectURI: 'https://tictacsnap.com/',
-                    scopeList: [
-                      'user.display_name',
-                      'user.bitmoji.avatar',
-                    ],
-                    handleResponseCallback: function() {
-                      snap.loginkit.fetchUserInfo()
-                        .then(data => console.log('User info:', data));
-                            location.href = "maingame.html";
-                      
-                      
-                    },
-                  });
-                };
-
-                        // Load the SDK asynchronously
+                    redirectURI: 'https://tictacsnap.glitch.me/',
+                  scopeList: [
+                    'user.display_name',
+                    'user.bitmoji.avatar',
+                  ],
+                  handleResponseCallback: function() {
+                    snap.loginkit.fetchUserInfo()
+                      .then(data => console.log('User info:', data));
+                       location.href = "maingame.html";   
+                    },          
+                 
+        });
+      };
+                           // Load the SDK asynchronously
                         (function (d, s, id) {
                           var js, sjs = d.getElementsByTagName(s)[0];
                           if (d.getElementById(id)) return;
@@ -66,6 +60,14 @@
                           js.src = "https://sdk.snapkit.com/js/v1/login.js";
                           sjs.parentNode.insertBefore(js, sjs);
                         }(document, 'script', 'loginkit-sdk'));
+                
+                          document.getElementById("login-button").classList.add("hidden")
+                        document.getElementById("profile").classList.remove("hidden")
+                        document.getElementById("picture").src = data["data"] ["me"] ["bitmoji"] ["avatar"]
+                        document.getElementById("welcome").innerHTML = "Welcome, " + data["data"] ["me"] ["displayName"] + "!" 
+            
+                
+                
                       </script>
                     </body>
                   </html>
@@ -93,43 +95,57 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="service-items">
+                      <a href="https://devpost.com/mreniva">
                         <div class="icon">
-                            <span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
+                          <img src="https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiCloid.png?1555198287831" alt="..." class="img-fluid">
                         </div>
+                      </a>
                         <h4><a href="https://devpost.com/mreniva">Miguelcloid Reniva</a></h4>
-                        <p>Web Developer & Front End Developer</p>
+                        <p>Front End Web Developer</p>
                     </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="service-items">
+                        <a href="https://devpost.com/JosueUriarte">
                         <div class="icon">
-                            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                          <img src="https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiJosue.png?1555198743989" alt="..." class="img-fluid">
                         </div>
                         <h4><a href="https://devpost.com/JosueUriarte">Josue Uriarte</a></h4>
                         <p>Web Developer & Game Developer</p>
-                    </div>
+                      </a>
+                  </div>
+                  
                 </div>
                 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="service-items">
-                        <div class="icon">
-                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                      <a href="https://devpost.com/KVILLA">
+                        <div class="icon">                          
+                          <img src="https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2Fyour_profile_picture%20(1).jpg?1555220928512" width="200 "height ="220 alt="..." class="center2">
                         </div>
                     
+                      
                         <h4><a href="https://devpost.com/KVILLA">Kevin Villanueva</a></h4>
                         <p>SnapChat Integration</p>
-                    </div>
+                      </a>
+                  </div>
                 </div>
                 
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="service-items">
+                    <a href="https://devpost.com/mofesdo?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">
                         <div class="icon">
-                            <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
+                          
+                          <img src="https://cdn.glitch.com/ba9bda52-cc6d-4056-8ff1-2a54207dce82%2FbitmojiMofesdo.png?1555197957968" "alt="..." class="img-fluid">
+
+                          
+                          
                         </div>
                         <h4><a href="https://devpost.com/mofesdo?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">Modesto Amador</a></h4>
                         <p>Game Developer & Graphic Designer </p>
-                    </div>
+                      </a>
+                  </div>
                 </div>
                 
                 
